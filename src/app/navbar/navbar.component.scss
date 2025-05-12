@@ -1,0 +1,143 @@
+@use '../../ma-variables.scss' as ma;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+  width: 100%;
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+
+    .nav-link,
+    .icon-link {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navbar-left {
+    margin-right: 15px;
+    margin-left: 25px;
+  }
+
+  .navbar-center {
+    width: 100%;
+  }
+
+  .navbar-right {
+    margin-right: 25px;
+  }
+
+  .logo {
+    @include ma.snow;
+    height: 44px;
+    width: auto;
+    &.mobile {
+      margin-right: 15px;
+      width: 35px;
+    }
+  }
+
+  .nav-link {
+    @include ma.snow;
+
+    margin: 0 1rem;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #333;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .nav-icon {
+    height: 24px;
+    width: 24px;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.mobile-menu {
+  @include ma.main-bg-color;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .navbar-center,
+    .navbar-right {
+      display: none;
+    }
+
+    .mobile-menu-button {
+      display: block;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    &.active {
+      display: flex;
+    }
+
+    .mobile-nav-link {
+      @include ma.snow;
+      margin: 1rem 0;
+      text-decoration: none;
+      &:hover {
+        @include ma.skycolor;
+      }
+    }
+
+    .mobile-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+
+      .mobile-icon-link {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}

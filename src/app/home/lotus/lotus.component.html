@@ -1,0 +1,329 @@
+<section>
+  <h2 class="title">{{ lotus_title }}</h2>
+  <p class="sub-title">
+    {{ lotus_sub_title }}
+  </p>
+  <!-- Section Select -->
+  <div class="section-select-buttons">
+    <button
+      class="button-section-1"
+      [class.active]="activeSection === 1"
+      (click)="switchSection(1)"
+    >
+      {{ lotus_option_1 }}
+    </button>
+
+    <!-- TODO: MORE separation animation in between section buttons -->
+    <ng-container *ngIf="isBrowser">
+      <ng-lottie [options]="lottieOptions"></ng-lottie>
+    </ng-container>
+
+    <button
+      class="button-section-2"
+      [class.active]="activeSection === 2"
+      (click)="switchSection(2)"
+    >
+      {{ lotus_option_2 }}
+    </button>
+  </div>
+  <!-- Section 1 - Public Org -->
+  <div class="section-1" [class.active]="activeSection === 1">
+    <!-- Leaf Select Buttons -->
+    <button
+      class="select-petal-1"
+      [class.active]="activePetalSection1 === 1"
+      (click)="selectPetal(1, 1)"
+    >
+      I
+    </button>
+    <button
+      class="select-petal-3"
+      [class.active]="activePetalSection1 === 3"
+      (click)="selectPetal(1, 3)"
+    >
+      II
+    </button>
+
+    <!-- Lotus -->
+    <div
+      class="petal-1"
+      [class.active]="activePetalSection1 === 1"
+      (click)="selectPetal(1, 1)"
+    >
+      <svg
+        class="vector"
+        width="545"
+        height="756"
+        viewBox="0 0 545 756"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="petal-fill"
+          d="M544.117 461.845C544.117 624.087 422.439 755.611 272.342 755.611C122.245 755.611 0.567383 624.087 0.567383 461.845C0.567383 306.29 144.539 97.3489 257.905 5.05444C266.311 -1.78885 278.237 -1.60668 286.486 5.42476C398.631 101.018 544.117 306.235 544.117 461.845Z"
+          fill="url(#paint0_radial_47_217)"
+        />
+        <path
+          d="M543.117 461.845C543.117 623.61 421.815 754.611 272.342 754.611C122.869 754.611 1.56738 623.61 1.56738 461.845C1.56738 384.335 37.4538 293.398 87.5804 210.243C137.696 127.107 201.959 51.8916 258.537 5.82993C266.565 -0.706084 277.952 -0.5352 285.837 6.1858C341.82 53.9062 406.161 129.025 456.502 211.649C506.855 294.294 543.117 384.312 543.117 461.845Z"
+          stroke="#2980B9"
+          stroke-opacity="0.67"
+          stroke-width="2"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial_47_217"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(272 -65) rotate(89.9761) scale(820.611 585.512)"
+          >
+            <stop stop-color="#2980B9" />
+            <stop offset="1" stop-color="#123953" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <div class="petal-texts">
+        <h4 class="petal-title">{{ lotus_o1_n1 }}</h4>
+        <p class="petal-content">
+          {{ lotus_o1_n1_text }}
+        </p>
+      </div>
+    </div>
+
+    <div class="petal-2">
+      <svg
+        class="vector"
+        width="545"
+        height="756"
+        viewBox="0 0 545 756"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="petal-fill"
+          d="M544.117 461.845C544.117 624.087 422.439 755.611 272.342 755.611C122.245 755.611 0.567383 624.087 0.567383 461.845C0.567383 306.29 144.539 97.3489 257.905 5.05444C266.311 -1.78885 278.237 -1.60668 286.486 5.42476C398.631 101.018 544.117 306.235 544.117 461.845Z"
+          fill="url(#paint0_radial_47_217)"
+        />
+        <path
+          d="M543.117 461.845C543.117 623.61 421.815 754.611 272.342 754.611C122.869 754.611 1.56738 623.61 1.56738 461.845C1.56738 384.335 37.4538 293.398 87.5804 210.243C137.696 127.107 201.959 51.8916 258.537 5.82993C266.565 -0.706084 277.952 -0.5352 285.837 6.1858C341.82 53.9062 406.161 129.025 456.502 211.649C506.855 294.294 543.117 384.312 543.117 461.845Z"
+          stroke="#2980B9"
+          stroke-opacity="0.67"
+          stroke-width="2"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial_47_217"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(272 -65) rotate(89.9761) scale(820.611 585.512)"
+          >
+            <stop stop-color="#2980B9" />
+            <stop offset="1" stop-color="#123953" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <!-- this one is empty -->
+    </div>
+
+    <div
+      class="petal-3"
+      [class.active]="activePetalSection1 === 3"
+      (click)="selectPetal(1, 3)"
+    >
+      <svg
+        class="vector"
+        width="545"
+        height="756"
+        viewBox="0 0 545 756"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="petal-fill"
+          d="M544.117 461.845C544.117 624.087 422.439 755.611 272.342 755.611C122.245 755.611 0.567383 624.087 0.567383 461.845C0.567383 306.29 144.539 97.3489 257.905 5.05444C266.311 -1.78885 278.237 -1.60668 286.486 5.42476C398.631 101.018 544.117 306.235 544.117 461.845Z"
+          fill="url(#paint0_radial_47_217)"
+        />
+        <path
+          d="M543.117 461.845C543.117 623.61 421.815 754.611 272.342 754.611C122.869 754.611 1.56738 623.61 1.56738 461.845C1.56738 384.335 37.4538 293.398 87.5804 210.243C137.696 127.107 201.959 51.8916 258.537 5.82993C266.565 -0.706084 277.952 -0.5352 285.837 6.1858C341.82 53.9062 406.161 129.025 456.502 211.649C506.855 294.294 543.117 384.312 543.117 461.845Z"
+          stroke="#2980B9"
+          stroke-opacity="0.67"
+          stroke-width="2"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial_47_217"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(272 -65) rotate(89.9761) scale(820.611 585.512)"
+          >
+            <stop stop-color="#2980B9" />
+            <stop offset="1" stop-color="#123953" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <div class="petal-texts">
+        <h4 class="petal-title">{{ lotus_o1_n2 }}</h4>
+        <p class="petal-content">
+          {{ lotus_o1_n2_text }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 - Executors -->
+  <div class="section-2" [class.active]="activeSection === 2">
+    <!-- Leaf Select Buttons -->
+    <button
+      class="select-petal-1"
+      [class.active]="activePetalSection2 === 1"
+      (click)="selectPetal(2, 1)"
+    >
+      I
+    </button>
+    <button
+      class="select-petal-2"
+      [class.active]="activePetalSection2 === 2"
+      (click)="selectPetal(2, 2)"
+    >
+      II
+    </button>
+    <button
+      class="select-petal-3"
+      [class.active]="activePetalSection2 === 3"
+      (click)="selectPetal(2, 3)"
+    >
+      III
+    </button>
+
+    <!-- Lotus -->
+    <div class="petal-1" [class.active]="activePetalSection2 === 1">
+      <svg
+        class="vector"
+        width="545"
+        height="757"
+        viewBox="0 0 545 757"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="petal-fill-1"
+          d="M544.285 462.645C544.285 624.887 422.607 756.41 272.51 756.41C122.413 756.41 0.735352 624.887 0.735352 462.645C0.735352 307.089 144.707 98.1483 258.073 5.85378C266.479 -0.9895 278.405 -0.80733 286.654 6.22411C398.799 101.818 544.285 307.034 544.285 462.645Z"
+          fill="url(#paint0_radial_180_12)"
+        />
+        <path
+          d="M543.285 462.645C543.285 624.409 421.983 755.41 272.51 755.41C123.037 755.41 1.73535 624.409 1.73535 462.645C1.73535 385.134 37.6218 294.198 87.7483 211.043C137.864 127.906 202.126 52.691 258.705 6.62928C266.733 0.0932638 278.12 0.264148 286.005 6.98515C341.988 54.7055 406.329 129.824 456.67 212.448C507.023 295.094 543.285 385.111 543.285 462.645Z"
+          stroke="#2980B9"
+          stroke-opacity="0.67"
+          stroke-width="2"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial_180_12"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(231.483 739.671) rotate(-92.6488) scale(696.183 496.732)"
+          >
+            <stop stop-color="#18567F" />
+            <stop offset="1" stop-color="#2980B9" />
+          </radialGradient>
+        </defs>
+      </svg>
+
+      <div class="petal-texts">
+        <h4 class="petal-title">{{ lotus_o2_n1 }}</h4>
+        <p class="petal-content">
+          {{ lotus_o2_n1_text }}
+        </p>
+      </div>
+    </div>
+    <div class="petal-2" [class.active]="activePetalSection2 === 2">
+      <svg
+        class="vector"
+        width="544"
+        height="756"
+        viewBox="0 0 544 756"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="petal-fill-2"
+          d="M543.549 462.033C543.549 624.276 421.872 755.799 271.775 755.799C121.678 755.799 0 624.276 0 462.033C0 306.478 143.972 97.5372 257.338 5.2427C265.744 -1.60058 277.669 -1.41841 285.918 5.61302C398.064 101.206 543.549 306.423 543.549 462.033Z"
+          fill="url(#paint0_radial_180_16)"
+        />
+        <path
+          d="M542.549 462.033C542.549 623.798 421.248 754.799 271.775 754.799C122.302 754.799 1 623.798 1 462.033C1 384.523 36.8864 293.587 87.013 210.432C137.129 127.295 201.391 52.0799 257.969 6.0182C265.997 -0.517821 277.385 -0.346937 285.27 6.37406C341.253 54.0944 405.594 129.213 455.934 211.837C506.288 294.483 542.549 384.5 542.549 462.033Z"
+          stroke="#2980B9"
+          stroke-opacity="0.67"
+          stroke-width="2"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial_180_16"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(271.433 -64.8118) rotate(89.9761) scale(820.611 585.512)"
+          >
+            <stop stop-color="#2980B9" />
+            <stop offset="1" stop-color="#123953" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <div class="petal-texts">
+        <h4 class="petal-title">{{ lotus_o2_n2 }}</h4>
+        <p class="petal-content">
+          {{ lotus_o2_n2_text }}
+        </p>
+      </div>
+    </div>
+    <div class="petal-3" [class.active]="activePetalSection2 === 3">
+      <svg
+        class="vector"
+        width="544"
+        height="756"
+        viewBox="0 0 544 756"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          class="petal-fill-3"
+          d="M543.549 462.033C543.549 624.276 421.872 755.799 271.775 755.799C121.678 755.799 0 624.276 0 462.033C0 306.478 143.972 97.5372 257.338 5.2427C265.743 -1.60059 277.669 -1.41841 285.918 5.61302C398.064 101.206 543.549 306.423 543.549 462.033Z"
+          fill="url(#paint0_radial_180_14)"
+        />
+        <path
+          d="M542.549 462.033C542.549 623.798 421.248 754.799 271.775 754.799C122.302 754.799 1 623.798 1 462.033C1 384.523 36.8864 293.587 87.013 210.432C137.129 127.295 201.391 52.0799 257.969 6.01819C265.997 -0.517821 277.385 -0.346937 285.27 6.37406C341.253 54.0944 405.594 129.213 455.934 211.837C506.288 294.483 542.549 384.5 542.549 462.033Z"
+          stroke="#2980B9"
+          stroke-opacity="0.67"
+          stroke-width="2"
+        />
+        <defs>
+          <radialGradient
+            id="paint0_radial_180_14"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(226.624 8.49981) rotate(78.3687) scale(741.784 529.269)"
+          >
+            <stop stop-color="#2980B9" />
+            <stop offset="1" stop-color="#185780" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <div class="petal-texts">
+        <h4 class="petal-title">{{ lotus_o2_n3 }}</h4>
+        <p class="petal-content">
+          {{ lotus_o2_n3_text }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

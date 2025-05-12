@@ -1,0 +1,56 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="#" class="logo-link">
+      <img
+        src="../../assets/imgs/nav/ma-logo-nav.webp"
+        alt="Logo"
+        class="logo"
+      />
+    </a>
+  </div>
+
+  <div class="navbar-center">
+    <a class="nav-link" (click)="goToStart()">Inicio</a>
+    <a class="nav-link" (click)="goToWho()">¿Quienes Somos?</a>
+    <a class="nav-link" (click)="goToContact()">Contáctanos</a>
+  </div>
+
+  <div class="navbar-right">
+    <a href="tel:+56962208690" class="icon-link">
+      <img
+        src="../../assets/imgs/nav/Phone-logo-nav.webp"
+        alt="Icon 1"
+        class="nav-icon"
+      />
+    </a>
+    <!-- When we have an active instagram -->
+    <!-- <a href="#" class="icon-link">
+        <img src="../../assets/imgs/nav/Instagram-logo-nav.webp" alt="Icon 2" class="nav-icon">
+      </a> -->
+    <a
+      href="mailto:preguntas@monitoraustral.cl"
+      class="icon-link"
+      title="preguntas@monitoraustral.cl"
+    >
+      <img
+        src="../../assets/imgs/nav/mail-logo-nav.webp"
+        alt="Icon 3"
+        class="nav-icon"
+      />
+    </a>
+  </div>
+
+  <button class="mobile-menu-button" (click)="toggleMobileMenu()">
+    <img
+      src="../../assets/imgs/nav/menu-dots.svg"
+      alt="Menu"
+      class="logo mobile"
+    />
+  </button>
+</nav>
+
+<div class="mobile-menu" [class.active]="isMobileMenuOpen">
+  <a (click)="goToStart()" class="mobile-nav-link">Inicio</a>
+  <a (click)="goToWho()" class="mobile-nav-link">Quienes Somos</a>
+  <a (click)="goToContact()" class="mobile-nav-link">Contáctanos</a>
+</div>

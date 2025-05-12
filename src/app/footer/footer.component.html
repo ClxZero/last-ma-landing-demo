@@ -1,0 +1,32 @@
+<section id="footer">
+  <img
+    src="../../assets/imgs/footer/footer-bg.svg"
+    alt="footer-background"
+    class="footer-background"
+  />
+  <img
+    src="../../assets/imgs/ma-logo-hd.webp"
+    alt="Monitor Austral"
+    class="ma-logo"
+  />
+  <div class="footer-info">
+    <div class="links">
+      <a *ngFor="let link of links" (click)="footerLink(link.link)">{{
+        link.text
+      }}</a>
+    </div>
+    <div class="copyright">
+      <p>Todos los derechos reservados.</p>
+      <p>Copyright Monitor Austral 2025</p>
+    </div>
+    <div class="contact-info">
+      <p
+        class="contact"
+        *ngFor="let c of contactInfo"
+        (click)="footerLink(c.link)"
+      >
+        {{ c.text }}
+      </p>
+    </div>
+  </div>
+</section>

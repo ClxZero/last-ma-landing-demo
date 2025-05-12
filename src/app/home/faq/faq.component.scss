@@ -1,0 +1,32 @@
+@use '../../../ma-variables.scss' as ma;
+
+#faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+
+  .faq-cards div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  h2 {
+    margin-bottom: 100px;
+  }
+
+  @include ma.mobile {
+    padding: 20px;
+    margin-bottom: 50px;
+
+    .faq-cards div {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+}

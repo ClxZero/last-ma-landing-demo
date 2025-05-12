@@ -1,0 +1,35 @@
+<section id="ma-hero">
+  <img id="bg-hero" src="assets/imgs/hero/bg-hero.svg" alt="background" />
+  <div class="intro">
+    <h1 class="font-murecho font-semibold">
+      {{ hero_title }}
+    </h1>
+    <p class="font-mukta font-regular">
+      {{ hero_sub_title }}
+    </p>
+
+    <div class="CTA-buttons">
+      <button
+        class="CTA font-merriweather font-regular"
+        href="https://app.monitoraustral.cl/"
+        target="_blank"
+        (click)="goToApp()"
+      >
+        {{ hero_button_cta }}
+      </button>
+      <button
+        class="demo font-merriweather font-regular"
+        href="#contact"
+        (click)="goToContact()"
+      >
+        {{ hero_button_contact }}
+      </button>
+    </div>
+  </div>
+  <div class="mountain">
+    <img
+      src="assets/imgs/hero/cordillera-hero-bg-no-transparency.webp"
+      alt="Una montaña nevada representa la presencia de monitor austral a lo largo de Chile"
+    />
+  </div>
+</section>

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /api/private/
+Allow: /
+
+Sitemap: https://www.monitoraustral.cl/sitemap.xml

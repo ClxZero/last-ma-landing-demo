@@ -1,0 +1,22 @@
+<section id="ma-functionality">
+  <img
+    class="func-bg"
+    src="../../../assets/imgs/func/func-bg.svg"
+    alt="bg-func"
+  />
+  <h2>{{ func_title }}</h2>
+
+  <ng-container *ngIf="isBrowser">
+    <ng-lottie [options]="lottieOptions"></ng-lottie>
+  </ng-container>
+
+  <div class="func-cards">
+    <ng-container *ngIf="functionalities.length">
+      <ma-funcard
+        *ngFor="let func of functionalities; index as i"
+        [title]="func.title"
+        [text]="func.text"
+      ></ma-funcard>
+    </ng-container>
+  </div>
+</section>

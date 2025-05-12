@@ -1,0 +1,86 @@
+@use '../../../ma-variables.scss' as ma;
+
+#ma-screenshots {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .ssbg {
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    margin-top: -70px;
+    width: 66%;
+  }
+
+  .ss1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    img {
+      height: 520px;
+    }
+
+    h5 {
+      margin: 5%;
+      padding-top: 70px;
+    }
+  }
+
+  .ss2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    h5 {
+      margin-bottom: 50px;
+    }
+
+    img {
+      width: 70%;
+    }
+  }
+
+  @include ma.mobile {
+    padding: 20px;
+
+    .ss1,
+    .ss2 {
+      flex-direction: column;
+      margin: 20px 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h5 {
+        font-size: 24px;
+        padding-top: 20px;
+        text-align: center;
+      }
+    }
+
+    .ss1 {
+      flex-direction: column-reverse;
+    }
+
+    .ssbg {
+      width: 100%;
+    }
+  }
+}

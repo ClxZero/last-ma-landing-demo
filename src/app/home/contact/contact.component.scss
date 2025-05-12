@@ -1,0 +1,28 @@
+@use '../../../ma-variables.scss' as ma;
+
+#contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+
+  .contatc-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    margin-left: -5%;
+    margin-top: -100px;
+    width: 100%;
+  }
+
+  .sub-title {
+    margin-top: 20px;
+    font-size: 26px;
+  }
+
+  .calendly-container {
+    width: 80%;
+  }
+}

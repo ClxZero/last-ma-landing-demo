@@ -1,0 +1,66 @@
+<div class="navigator section-select-buttons">
+  <button (click)="jumpToStep(step_1)" [class.active]="activeSection === 1">1</button>
+  <button (click)="jumpToStep(step_2)" [class.active]="activeSection === 2">2</button>
+  <button (click)="jumpToStep(step_3)" [class.active]="activeSection === 3">3</button>
+  <button (click)="jumpToStep(step_4)" [class.active]="activeSection === 4">4</button>
+</div>
+<section id="report">
+  <h4>{{ report_title }}</h4>
+  <img
+    class="bg-report"
+    src="../../../assets/imgs/reports/report_bg.svg"
+    alt="background"
+  />
+  <div class="report-slide-1">
+    <img
+      class="report-showoff"
+      src="../../../assets/imgs/reports/report_demo_first_page.webp"
+      alt="Ejemplo de Reporte"
+    />
+    <h6>{{ report_1 }}</h6>
+    <img
+      class="bg-report"
+      src="../../../assets/imgs/reports/report_bg.svg"
+      alt="background"
+    />
+  </div>
+  <div class="report-slide-2">
+    <img
+      class="report-showoff"
+      src="../../../assets/imgs/reports/titulodescripcion.webp"
+      alt="Ejemplo de Reporte"
+    />
+    <h6>{{ report_2 }}</h6>
+    <img
+      class="bg-report"
+      src="../../../assets/imgs/reports/report_bg.svg"
+      alt="background"
+    />
+  </div>
+  <div class="report-slide-3">
+    <img
+      class="report-showoff"
+      src="../../../assets/imgs/reports/resumeninfo.webp"
+      alt="Ejemplo de Reporte"
+    />
+    <h6>{{ report_3 }}</h6>
+    <img
+      class="bg-report"
+      src="../../../assets/imgs/reports/report_bg.svg"
+      alt="background"
+    />
+  </div>
+  <div class="report-slide-4">
+    <img
+      class="report-showoff"
+      src="../../../assets/imgs/reports/report_demo_second_page.webp"
+      alt="Ejemplo de Reporte"
+    />
+    <h6>{{ report_4 }}</h6>
+    <img
+      class="bg-report"
+      src="../../../assets/imgs/reports/report_bg.svg"
+      alt="background"
+    />
+  </div>
+</section>

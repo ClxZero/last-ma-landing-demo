@@ -1,0 +1,23 @@
+@use '../ma-variables.scss' as ma;
+
+#core {
+  @include ma.main-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.limiter {
+  margin: 5%;
+  max-width: 1500px;
+}
+
+ma-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+}

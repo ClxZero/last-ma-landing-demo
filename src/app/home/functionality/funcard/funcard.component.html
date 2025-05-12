@@ -1,0 +1,22 @@
+<div class="funcard">
+  <div
+    class="funcard-header"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+    (click)="onToggleSelect()"
+    [class.selected]="isSelected"
+  >
+    <img
+      src="../../../../assets/imgs/func/card-tip.webp"
+      alt="new funcionality"
+    />
+    <h4>{{ title }}</h4>
+  </div>
+  <p
+    class="funcard-text"
+    [class.visible]="isHovered || isSelected"
+    [class.selected]="isSelected"
+  >
+    {{ text }}
+  </p>
+</div>

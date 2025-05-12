@@ -1,0 +1,106 @@
+@use '../../../ma-variables.scss' as ma;
+
+#ma-functionality {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 290px;
+
+  ng-lottie {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .func-bg {
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    right: 0;
+    height: 120%;
+    margin-top: -200px;
+    margin-right: -5%;
+  }
+
+  h2 {
+    margin: 50px;
+    margin-bottom: 20px;
+  }
+
+  .func-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    row-gap: 80px;
+
+    ma-funcard {
+      &:nth-child(2n + 1) {
+        grid-column: 1 / 2;
+      }
+
+      &:nth-child(2n) {
+        grid-column: 2 / 3;
+      }
+
+      // No easy solution here ! Add more if needed xoxo
+      &:nth-child(1) {
+        grid-row: 1;
+      }
+      &:nth-child(2) {
+        grid-row: 2;
+      }
+      &:nth-child(3) {
+        grid-row: 3;
+      }
+      &:nth-child(4) {
+        grid-row: 4;
+      }
+      &:nth-child(5) {
+        grid-row: 5;
+      }
+      &:nth-child(6) {
+        grid-row: 6;
+      }
+      &:nth-child(7) {
+        grid-row: 7;
+      }
+      &:nth-child(8) {
+        grid-row: 8;
+      }
+      &:nth-child(9) {
+        grid-row: 9;
+      }
+      &:nth-child(10) {
+        grid-row: 10;
+      }
+    }
+  }
+
+  @include ma.mobile {
+    margin-bottom: 50px;
+
+    .func-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+      padding: 20px;
+
+      ma-funcard {
+        grid-column: 1;
+        grid-row: auto;
+
+        h4 {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .func-bg {
+      height: 100%;
+      margin-top: 0px;
+    }
+  }
+}

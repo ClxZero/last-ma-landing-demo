@@ -1,0 +1,59 @@
+// MA Colors
+@mixin maincolor {
+  color: #2980b9;
+}
+
+@mixin secondarycolor {
+  color: #76b4ce;
+}
+
+@mixin skycolor {
+  color: #9dccdf;
+}
+
+@mixin snow {
+  color: #f1f1ea;
+}
+
+@mixin darkblue {
+  color: #163f59;
+}
+
+// MA Backgrounds
+
+@mixin main-bg-color {
+  background-color: #0a0e11;
+}
+
+@mixin bg-maincolor {
+  background-color: #2980b9;
+}
+
+@mixin bg-secondarycolor {
+  background-color: #76b4ce;
+}
+
+@mixin bg-skycolor {
+  background-color: #9dccdf;
+}
+
+@mixin bg-snow {
+  background-color: #f1f1ea;
+}
+
+@mixin bg-darkblue {
+  background-color: #163f59;
+}
+
+// Breakpoints
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}

@@ -1,0 +1,12 @@
+<section id="faq">
+  <h2>{{ faq_title }}</h2>
+  <div class="faq-cards">
+    <div *ngIf="faqs.length">
+      <ma-faqcard
+        *ngFor="let faq of faqs"
+        [question]="faq.title"
+        [answer]="faq.text"
+      ></ma-faqcard>
+    </div>
+  </div>
+</section>

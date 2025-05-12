@@ -1,0 +1,128 @@
+@use '../../../ma-variables.scss' as ma;
+
+#report {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+
+  .bg-report {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  h4 {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    font-size: 44px;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  .report-slide-1,
+  .report-slide-2,
+  .report-slide-3,
+  .report-slide-4 {
+    @include ma.main-bg-color;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .report-showoff {
+      height: 100%;
+      z-index: 4;
+    }
+  }
+
+  @include ma.mobile {
+    height: auto;
+    min-height: 400px;
+
+    h4 {
+      font-size: 32px;
+    }
+
+    .report-slide-1,
+    .report-slide-2,
+    .report-slide-3,
+    .report-slide-4 {
+      flex-direction: column-reverse;
+      padding: 20px;
+
+      .report-showoff {
+        height: auto;
+        width: 100%;
+      }
+
+      h6 {
+        margin: 20px 0;
+        text-align: center;
+        width: 80%;
+      }
+    }
+  }
+}
+
+.section-select-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0 20px;
+
+  border-top: 1px solid rgb(41, 128, 185, 0.4);
+  border-bottom: 1px solid rgb(41, 128, 185, 0.5);
+
+  button {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 14, 17, 0) 15%,
+      rgba(101, 165, 192, 0) 40%,
+      rgba(10, 14, 17, 0) 85%
+    );
+    transition: background 1s ease;
+    width: 100%;
+    text-align: left;
+    padding-left: 10%;
+    font-size: 20px;
+    border: none;
+
+    &.active {
+      background: linear-gradient(
+        90deg,
+        rgba(10, 14, 17, 0) 15%,
+        rgba(118, 180, 206, 0.4) 40%,
+        rgba(10, 14, 17, 0) 85%
+      );
+    }
+  }
+
+  @include ma.mobile {
+    top: 80px;
+  }
+}
