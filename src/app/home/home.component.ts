@@ -4,7 +4,7 @@ import {NavigationEnd, Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {map, Subscription} from 'rxjs';
 import {CsvParserService} from '../services/csv-parser.service';
-import {ContactComponent} from './contact/contact.component';
+// import {ContactComponent} from './contact/contact.component';
 import {FaqComponent} from './faq/faq.component';
 import {FunctionalityComponent} from './functionality/functionality.component';
 import {HeroComponent} from './hero/hero.component';
@@ -17,7 +17,6 @@ import {GroupedObjects, TextObject} from '../models/csvtexts';
 @Component({
   selector: 'app-home',
   imports: [
-    ContactComponent,
     FaqComponent,
     FunctionalityComponent,
     HeroComponent,

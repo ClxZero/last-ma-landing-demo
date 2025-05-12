@@ -1,21 +1,19 @@
 {
-  "name": "ma-landing-2025-demo",
+  "name": "ma-landing-2025",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build && npm run sentry:sourcemaps",
+    "build": "ng build",
+    "build:ssr": "ng build && ng run ma-landing-2025:server",
+    "start": "node dist/ma-landing-2025/server/server.mjs",
+    "vercel-build": "ng build && node dist/ma-landing-2025/server/server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ma-landing-2025": "node dist/ma-landing-2025/server/server.mjs",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run lint",
-    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org monitor-austral --project ma-landing ./dist/ma-landing-2025 && sentry-cli sourcemaps upload --org monitor-austral --project ma-landing ./dist/ma-landing-2025"
+    "fix": "gts fix"
   },
   "private": true,
   "dependencies": {
