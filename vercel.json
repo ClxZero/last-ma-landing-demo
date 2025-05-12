@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "public": true,
+    "name": "ma-landing-2025-demo",
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/api"
+      }
+    ],
+    "functions": {
+      "api/index.js": {
+        "includeFiles": "dist/ma-landing-2025-demo/**"
+      }
+    }
+  }
+  
